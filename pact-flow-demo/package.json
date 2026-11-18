@@ -1,0 +1,14 @@
+{
+  "name": "pactflow-cdct-demo",
+  "private": true,
+  "description": "Consumer-driven contract testing demo for PactFlow: matrix, feature branches, pending/WIP pacts, can-i-deploy, webhooks",
+  "workspaces": ["consumer", "provider"],
+  "scripts": {
+    "test:consumer": "npm test -w consumer",
+    "verify:provider": "npm run verify -w provider",
+    "demo": "bash scripts/demo.sh"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact-cli": "^16.0.0"
+  }
+}
