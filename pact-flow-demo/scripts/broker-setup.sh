@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ONE-TIME broker setup. Idempotent.
+# ONE-TIME broker setup. Idempotent. (In CI: .github/workflows/broker-setup.yml)
 #  1. Environments  -> what `record-deployment` / `can-i-deploy --to-environment` refer to.
 #  2. Webhook       -> "contract_requiring_verification_published" triggers provider verification
 #                      whenever a consumer publishes a NEW or CHANGED pact (parallel-dev mechanism #4).
@@ -10,7 +10,7 @@ for e in test production; do
 done
 
 : "${GITHUB_REPOSITORY:?e.g. my-org/pactflow-cdct-demo}"
-: "${GITHUB_TOKEN:?PAT with repo scope, used by the webhook to call repository_dispatch}"
+: "${GITHUB_TOKEN:?PAT with permission to call repository_dispatch, used by the webhook}"
 pb create-or-update-webhook \
   "https://api.github.com/repos/${GITHUB_REPOSITORY}/dispatches" \
   --uuid 7f2f2a58-6c3c-4d0a-9d3e-0c1d9f4b1a01 \

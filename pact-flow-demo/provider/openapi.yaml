@@ -1,4 +1,4 @@
-# Used only by the OPTIONAL bi-directional flow (scripts/publish-oas.sh).
+# Used only by the OPTIONAL bi-directional flow (scripts/publish-oas.sh, job publish-oas in provider.yml).
 openapi: 3.0.3
 info: { title: product-service, version: 1.0.0 }
 paths:

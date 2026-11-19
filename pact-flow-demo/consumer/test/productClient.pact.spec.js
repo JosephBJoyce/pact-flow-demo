@@ -5,8 +5,8 @@
  * against it, and writes consumer/pacts/order-web-product-service.json.
  *
  * Maps to README:
- *  - Matrix creation (#1):   the generated pact is what scripts/publish-pacts.sh publishes,
- *                            creating the consumer half of each Matrix row.
+ *  - Matrix creation (#1):   the generated pact is what scripts/publish-pacts.sh publishes
+ *                            (job `publish-pact` in consumer.yml), creating the consumer half of each Matrix row.
  *  - Feature branches (#2):  the "stock" interaction below only exists when
  *                            CONSUMER_FEATURE_STOCK=true, simulating a consumer feature
  *                            branch that needs a NEW provider capability.

@@ -1,7 +1,7 @@
 const express = require('express');
 
 /**
- * product-service. Two env flags simulate provider feature branches (see scripts/demo.sh):
+ * product-service. Two env flags simulate provider feature branches (see scripts/demo.sh and provider.yml):
  *   PROVIDER_FEATURE_STOCK=true      -> adds GET /products/:id/stock (backwards-compatible addition)
  *   PROVIDER_BREAKING_RENAME=true    -> renames `price` to `amount` (BREAKING change the contract must catch)
  */

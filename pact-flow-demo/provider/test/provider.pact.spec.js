@@ -10,8 +10,8 @@
  *
  * Modes:
  *   1. LOCAL (no PACT_BROKER_BASE_URL): verifies consumer/pacts/*.json straight from disk. No broker needed.
- *   2. BROKER, normal build:    selectors below.
- *   3. BROKER, webhook build:   PACT_URL set -> verify exactly the pact that triggered the build.
+ *   2. BROKER, normal build:    selectors below (provider.yml).
+ *   3. BROKER, webhook build:   PACT_URL set -> verify exactly the pact that triggered the build (provider-webhook.yml).
  */
 const path = require('path');
 const { Verifier } = require('@pact-foundation/pact');
